@@ -37,6 +37,7 @@ def retListOfFilesInADir(inputPath):
 
 if __name__ == "__main__":
 # Driver code
+    print(sys.argv[1], sys.argv[2])
     # Get list of files from input dir1
     inputList1 = retListOfFilesInADir(sys.argv[1])
     print(inputList1)
