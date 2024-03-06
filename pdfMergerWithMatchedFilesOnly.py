@@ -49,8 +49,8 @@ if __name__ == "__main__":
     for i in inputList1:
       matched = 0
       for j in inputList2:
-        if i.split('-')[0] == j.split('-')[0]: 
-           print(i)
+        if i.split('\\')[5].split('-')[0] == j.split('\\')[5].split('-')[0]: 
+           #print(i)
            matched = 1
       if ( matched != 1):
          unmatchedItems.append(i)
@@ -59,13 +59,17 @@ if __name__ == "__main__":
     for i in inputList2:
       matched = 0
       for j in inputList1:
-        if i.split('-')[0] == j.split('-')[0]: 
-           print(i)
+        if i.split('\\')[5].split('-')[0] == j.split('\\')[5].split('-')[0]: 
+           #print(i)
            matched = 1
       if ( matched != 1):
          unmatchedItems.append(i)
          inputList2.remove(i)
 
+    print(unmatchedItems) 
+    print(len(inputList1))
+    print(len(inputList2))
+    print(len(unmatchedItems))
 
     # Merge both input lists
     listOfPdfFiles_1 = zip(inputList1, inputList2)
